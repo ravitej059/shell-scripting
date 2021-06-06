@@ -6,3 +6,4 @@ echo -e "Hello raviteja/n"
 echo-e "welocome to devops trainee/n"
 
 echo-e hello
+echo -e   123456
