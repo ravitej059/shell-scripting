@@ -7,3 +7,4 @@ echo-e "welocome to devops trainee/n"
 
 echo-e hello
 echo -e   123456
+echo -e "/e[31m hello in red color"]
