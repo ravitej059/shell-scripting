@@ -8,4 +8,5 @@
 #echo-e hello
 #echo -e   123456
 #echo -e "/e[31m hello in red color
-# echo -e "/[32m hello in green colo"]
+# echo -e "/[32m hello in green color"]
+a=10
