@@ -1,8 +1,0 @@
-shell scripting topics
- sha -bang & comments
- printing
- varibles
- inputs
- functions
- conditions
- loops
