@@ -4,3 +4,5 @@ variables
 inputs
 output
 functions
+loops
+conditions
