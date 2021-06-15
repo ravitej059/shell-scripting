@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+##  Declare a function
+SAMPLE() {
+   echo Welcome to SSAMPLE Function
+   return
+   echo Value of a =$a
+   b=20
+   echo First Arugment = $1
+
+}
+
+##  Access your function
+a=10
+Sample xyz
+Sample $1
+echo value of b = $b
+
