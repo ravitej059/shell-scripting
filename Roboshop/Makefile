@@ -11,27 +11,27 @@ Mongodb:	##	Install Mongodb Component
 Catalogue:	##	Install Catalogue Component
 	@sh Components/Catalogue.sh
 
-Redis:		##	 Install Redis Components
+Redis:		##	 Install Redis Component
 	@sh Components/Redis.sh
 
-User:		##	Install User Componenets
+User:		##	Install User Component
 	@sh Components/User.sh
 
-Crat:		##	Install Cart Componenets
+Crat:		##	Install Cart Component
 	@sh Components/Cart.sh
 
-Mysql:		##	Install Mysql Components
+Mysql:		##	Install Mysql Component
 	@sh Components/Mysql.sh
 
 
-Shipping:	##	Install Shipping Componenets
+Shipping:	##	Install Shipping Component
 	@sh Components/Shipping.sh
 
 
-Payment:	##	Install Paymemt Componenets
+Payment:	##	Install Paymemt Component
 	@sh Components/payment.sh
 
 
-Rabitmq:	##	Install Rabitmq Components
+Rabitmq:	##	Install Rabitmq Component
 	@sh Components/Rabitmq
 
