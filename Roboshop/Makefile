@@ -17,7 +17,7 @@ Redis:		##	 Install Redis Component
 User:		##	Install User Component
 	@sh Components/User.sh
 
-Crat:		##	Install Cart Component
+Cart:		##	Install Cart Component
 	@sh Components/Cart.sh
 
 Mysql:		##	Install Mysql Component
@@ -32,6 +32,6 @@ Payment:	##	Install Paymemt Component
 	@sh Components/payment.sh
 
 
-Rabitmq:	##	Install Rabitmq Component
-	@sh Components/Rabitmq
+Rabbitmq:	##	Install Rabitmq Component
+	@sh Components/Rabbitmq
 
