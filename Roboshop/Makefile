@@ -1,5 +1,5 @@
 help:	## print Help Massage
-	@fgrep -h "#" $(MAKEFILE_LIST) | fgrep-V fgrep | sed -e 's/\\$$//' | sed -e 's##//'
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's##//'
 
 Frontend:	##  Install Frontend Component
 	@sh components/frontend.sh
