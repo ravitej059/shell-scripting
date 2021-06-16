@@ -22,9 +22,12 @@ Crat:		##Install Cart Componenets
 
 Mysql:		## Install Mysql Components
 	@sh Componenets/Mysql.sh
+
 Shipping:	## Install Shipping Componenets
 	@sh Componenets/Shipping.sh
+
 Payment:	## Install Paymemt Componenets
 	@sh Componenets/payment.sh
+
 Rabitmq:	## Install Rabitmq Components
 	@sh components/Rabitmq
