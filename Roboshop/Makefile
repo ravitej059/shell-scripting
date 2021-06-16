@@ -34,3 +34,4 @@ Payment:	## Install Paymemt Componenets
 
 Rabitmq:	## Install Rabitmq Components
 	@sh components/Rabitmq
+
