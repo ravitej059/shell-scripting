@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo installing mysql:
+echo installing Frontend
+yum install nginx -y
+systemctl start nginx
