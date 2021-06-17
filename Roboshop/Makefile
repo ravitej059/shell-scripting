@@ -1,32 +1,32 @@
 help:		## Print Help Message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-frontend:
+frontend:	## Install Frontend Component
 	@sh components/frontend.sh
 
-mongodb:
+mongodb:	## Install MongoDB Component
 	@sh components/mongodb.sh
 
-catalogue:
+catalogue:	## Install Catalogue Component
 	@sh components/catalogue.sh
 
-redis:
+redis:		## Install Redis Component
 	@sh components/redis.sh
 
-user:
+user:		## Install User Component
 	@sh components/user.sh
 
-cart:
+cart:		## Install Cart Component
 	@sh components/cart.sh
 
-mysql:
+mysql:		## Install MySQL Component
 	@sh components/mysql.sh
 
-shipping:
+shipping:	## Install Shipping Component
 	@sh components/shipping.sh
 
-payment:
+payment:	## Install Payment Component
 	@sh components/payment.sh
 
-rabbitmq:
+rabbitmq:	## Install RabbitMQ Component
 	@sh components/rabbitmq.sh
