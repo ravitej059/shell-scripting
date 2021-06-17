@@ -3,11 +3,11 @@
 source components/common.sh
 
 HEAD "Installing  Nginx"
-yum install  ngnix -y &>>/tmp/roboshop.log
+yum install  ngnix -y &>>/tmp/Roboshop.log
 echo -e "\e[32m done\e[0m"
 STAT $?
 
 HEAD "Start Nginx"
-systemctl start nginx &>>/tmp/roboshop.log
-systemctl start enable nginx &>>.tmp/roboshop.log
+systemctl start nginx &>>/tmp/Roboshop.log
+systemctl start enable nginx &>>.tmp/Roboshop.log
 STAT $?
