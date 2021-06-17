@@ -1,37 +1,32 @@
-help:		## print Help Massage
-	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's##//'
+help:		## Print Help Message
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-frontend:	##Install Frontend Component
-	@sh Components/frontend.sh
+frontend:	## Install Frontend Component
+	@sh components/frontend.sh
 
-mongodb:	##	Install Mongodb Component
-	@sh Components/Mongodb.sh
-
+mongodb:	## Install MongoDB Component
+	@sh components/mongodb.sh
 
 catalogue:	## Install Catalogue Component
-	@sh Components/Catalogue.sh
+	@sh components/catalogue.sh
 
-cedis:		## Install Redis Component
-	@sh Components/Redis.sh
+redis:		## Install Redis Component
+	@sh components/redis.sh
 
 user:		## Install User Component
-	@sh Components/User.sh
+	@sh components/user.sh
 
 cart:		## Install Cart Component
-	@sh Components/Cart.sh
+	@sh components/cart.sh
 
-mysql:		## Install Mysql Component
-	@sh Components/Mysql.sh
-
+mysql:		## Install MySQL Component
+	@sh components/mysql.sh
 
 shipping:	## Install Shipping Component
-	@sh Components/Shipping.sh
+	@sh components/shipping.sh
 
+payment:	## Install Payment Component
+	@sh components/payment.sh
 
-payment:	## Install Paymemt Component
-	@sh Components/payment.sh
-
-
-rabbitmq:	## Install RabitMQ Component
-	@sh Components/Rabbitmq.sh
-
+rabbitmq:	## Install RabbitMQ Component
+	@sh components/rabbitmq.sh
