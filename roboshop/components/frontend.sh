@@ -22,5 +22,4 @@ STAT $?
 
 HEAD "Extract Downloaded Content"
 unzip -d /usr/share/nginx/html /tmp/frontend.zip &>>/tmp/roboshop.log
-
 STAT $?
