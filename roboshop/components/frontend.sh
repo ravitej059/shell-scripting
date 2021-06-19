@@ -4,6 +4,7 @@ source components/common.sh
 
 HEAD "Installing  Nginx\t"
 yum install  ngnix -y &>>/tmp/roboshop.log
+echo -e "\e[1;32m done\e[0m"
 STAT $?
 
 HEAD "Start Nginx\t\t"
