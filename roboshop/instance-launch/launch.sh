@@ -17,3 +17,8 @@ aws ec2 run-instances     --launch-template LaunchTemplateId=${LID},Version=${LV
     echo "${COMPONENT} Instance already exists!!"
     exit 0
   fi
+
+  if [ "${INSTANCE_STATE}" = "stopped" ]; then
+    echo "${COMPONENT} Instance already exists!!"
+    return 0
+  fi
