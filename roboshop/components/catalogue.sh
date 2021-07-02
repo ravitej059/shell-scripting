@@ -4,7 +4,7 @@ source components/common.sh
 rm -f /tmp/roboshop.log
 
 HEAD "Install Nodejs"
-yum instal nodejs make gcc-c++ -y &>>/tmp/roboshop.log
+yum install nodejs make gcc-c++ -y &>>/tmp/roboshop.log
 STAT $?
 
 HEAD "Add Roboshop App User"
