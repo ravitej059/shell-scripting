@@ -10,7 +10,7 @@ STAT $?
 HEAD "Add roboshop APP User"
 id roboshop &>>/tmp/roboshop.log
 
-if [ $? -eq 0]; then
+if [ $? -eq 0 ]; then
 echo user is Already is there, so skipping  the user creation &>>/tmp/roboshop.log
  STAT $?
 else
