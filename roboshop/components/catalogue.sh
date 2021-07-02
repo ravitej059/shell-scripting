@@ -10,7 +10,8 @@ STAT $?
 HEAD "Add Roboshop App User"
 id roboshop &>>/tmp/roboshop.log
 if [ $? -eq 0 ]; then
-
+HEAD "Add roboshop APP User"
+id roboshop &>>/tmp/roboshop.log
 
 useradd roboshop &>>/tmp/roboshop.log
  STAT $?
