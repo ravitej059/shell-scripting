@@ -30,6 +30,6 @@ HEAD "Install Nodejs Dependencies"
  STAT $?
 
 HEAD "Fix Permission to the App Contenet"
-Chown roboshop:roboshop /home/roboshop  -R
+chown roboshop:roboshop /home/roboshop  -R
 STAT $?
 
