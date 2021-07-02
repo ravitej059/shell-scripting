@@ -22,7 +22,7 @@ useradd roboshop &>>/tmp/roboshop.log
 STAT $?
 
 HEAD "Extract  the Downloaded Archive"
-cd /home/roboshop && rm-rf catalogue && unzip /tmp/catalogue.zip &>>/tmp/roboshop.log &&mv catalogue-main catalogue
+cd /home/roboshop && rm -rf catalogue && unzip /tmp/catalogue.zip &>>/tmp/roboshop.log &&mv catalogue-main catalogue
 STAT $?
 
 HEAD "Install Nodejs Dependencies"
