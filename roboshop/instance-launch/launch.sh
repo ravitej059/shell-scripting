@@ -7,7 +7,7 @@ if [ -z "${COMPONENT}" ];  then
   exit 1
 fi
 
-LID=lt-08bface624cf92430
+LID=lt-0d3d6c2696389f95f
 LVER=1
 
  INSTANCE_STATE=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}"  | jq .Reservations[].Instances[].State.Name | xargs -n1)
