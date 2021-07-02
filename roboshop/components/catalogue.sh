@@ -7,21 +7,19 @@ HEAD "Install Nodejs"
 yum install nodejs make gcc-c++ -y &>>/tmp/roboshop.log
 STAT $?
 
-HEAD "Add Roboshop App User"
-id roboshop &>>/tmp/roboshop.log
-if [ $? -eq 0 ]; then
 HEAD "Add roboshop APP User"
 id roboshop &>>/tmp/roboshop.log
+
 if [ $? -eq 0]; then
-echo user is Already is ther so skipping  the user creation &>>/tmp/roboshop.log
-STAT $?
+echo user is Already is there, so skipping  the user creation &>>/tmp/roboshop.log
+ STAT $?
 else
-useradd roboshop &>>/tmp/roboshop.log
+ useradd roboshop &>>/tmp/roboshop.log
  STAT $?
  fi
 
- HEAD " Download  App From Github"
- curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+HEAD " Download  App From Github"
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
 STAT $?
 
 HEAD "Extract  the Downloaded Archive"
