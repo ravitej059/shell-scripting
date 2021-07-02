@@ -25,8 +25,8 @@ HEAD "Extract  the Downloaded Archive"
 cd /home/roboshop && rm -rf catalogue && unzip /tmp/catalogue.zip &>>/tmp/roboshop.log && mv catalogue-main catalogue
 STAT $?
 
-HEAD "Install Nodejs Dependencies"
- cd /home/roboshop &&  npm install --unsafe-perm &>>/tmp/roboshop.log
+HEAD "Install NodeJS Dependencies"
+ cd /home/roboshop/catalogue && npm install --unsafe-perm &>>/tmp/roboshop.log
  STAT $?
 
 HEAD "Fix Permission to the App Contenet"
