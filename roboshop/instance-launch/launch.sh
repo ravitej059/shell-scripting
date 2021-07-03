@@ -9,9 +9,9 @@ fi
 
 LID=lt-0d3d6c2696389f95f
 LVER=1
-## Validate If Instance is already there
-
-DNS_UPDATE() {
+aws_access_key_id=AKIAWVI7LUXVTWP6PRP4
+aws_secret-access_key=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
+  DNS_UPDATETE() {
   PRIVATEIP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}"  | jq .Reservations[].Instances[].PrivateIpAddress | xargs -n1)
   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${PRIVATEIP}/" record.json >/tmp/record.json
   aws route53 change-resource-record-sets --hosted-zone-id Z04831613M7X1SNANEAOG --change-batch file:///tmp/record.json | jq
