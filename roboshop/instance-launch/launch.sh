@@ -9,8 +9,6 @@ fi
 
 LID=lt-0d3d6c2696389f95f
 LVER=1
-aws_access_key_id=AKIAWVI7LUXVTWP6PRP4
-aws_secret-access_key=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
   DNS_UPDATETE() {
   PRIVATEIP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}"  | jq .Reservations[].Instances[].PrivateIpAddress | xargs -n1)
   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${PRIVATEIP}/" record.json >/tmp/record.json
@@ -31,4 +29,3 @@ aws_secret-access_key=B0GwknZxNCW4SFl7qG2yXGbCJiPTyA9tmc8yZpXh
 
   aws ec2 run-instances --launch-template LaunchTemplateId=${LID},Version=${LVER}  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}}]" | jq
   sleep 30
-DNS_UPDATE
