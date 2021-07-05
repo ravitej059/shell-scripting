@@ -10,7 +10,7 @@ fi
 LID=lt-0d3d6c2696389f95f
 LVER=1
 
-DNS-UPDATE(){
+DNS_UPDATE(){
    PRIVATEIP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}" | jq .Reservatons[].Instances[].PrivateIpAddress |xargs -n1)
    sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IpAddress/${PRIVATEIP}/" record.josn >/tmp/record.json
    aws route53 change-resource-record-sets-hosted-zone-id Z04831613M7X1SNANEAOG --change-batch   file:///tmp/record.josn |jq
