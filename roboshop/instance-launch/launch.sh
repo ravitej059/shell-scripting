@@ -22,8 +22,7 @@ DNS_UPDATE(){
   if [ "${INSTANCE_STATE}" = "running" ]; then
     echo "${COMPONENT} Instance already exists!!"
     DNS_UPDATE
-
-    return 0
+    exit 0
   fi
 
   if [ "${INSTANCE_STATE}" = "stopped" ]; then
