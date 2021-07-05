@@ -11,8 +11,8 @@ LID=lt-0d3d6c2696389f95f
 LVER=1
 
 DNS_UPDATE(){
-   PRIVATEIP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}" | jq .Reservations[].Instances[].PRIVATEIPADDRESS | xargs -n1)
-   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IpAddress/${PRIVATEIP}/" record.json >/tmp/record.json
+   PRIVATEIP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}" | jq .Reservations[].Instances[].privateIpAddress | xargs -n1)
+   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${PRIVATEIP}/" record.json >/tmp/record.json
    aws route53 change-resource-record-sets --hosted-zone-id Z04831613M7X1SNANEAOG --change-batch   file:///tmp/record.json | jq
 }
 
