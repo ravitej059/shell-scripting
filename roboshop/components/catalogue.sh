@@ -35,7 +35,7 @@ chown roboshop:roboshop /home/roboshop  -R
 STAT $?
 
 HEAD "Setup Systemd Service"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service  && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service  && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
 STAT $?
 
 HEAD "Start Catalogue Service"
