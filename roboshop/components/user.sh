@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo installing user:
+source components/common.sh
+rm -f /tmp/roboshop.log
+set-hostname user
+NODEJS "user"
