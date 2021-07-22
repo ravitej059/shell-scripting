@@ -47,7 +47,7 @@ chown roboshop:roboshop /home/roboshop  -R
 STAT $?
 
 HEAD "Setup Systemd Service"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/$1/systemd.service  && mv /home/roboshop/$1/systemd.service /etc/systemd/system/$1.service
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONOGO_ENDPOINT/mogodb.roboshp.internal/' /home/roboshop/$1/systemd.service  && mv /home/roboshop/$1/systemd.service /etc/systemd/system/$1.service
 STAT $?
 
 HEAD "Start $1 Service"
