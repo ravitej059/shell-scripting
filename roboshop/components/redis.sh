@@ -7,3 +7,16 @@ set-hostname  redis
 HEAD "Setup Redis Repos"
 yum install epel-release yum-utils http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y &>>/tmp/roboshop.log && yum-config-manager --enable remi &>>/tmp/roboshop.log
 STAT $?
+HEAD "Install Redis"
+ yum install redis -y &>>/tmp/roboshop.log
+ STAT $?
+
+HEAD "Update Listen Address in Redis Config"
+ sed -i -e  's/127.0.0.1/0.0.0.0/' /etc/redisredis.conf
+ STAT $?
+
+HEAD "Start Redis Service"
+systemctl enable redis &>>/tmp/roboshop.log && systemctl restart redis &>>/tmp/roboshop.log
+STAT $?
+
+
