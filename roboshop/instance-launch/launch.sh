@@ -8,7 +8,7 @@ if [ -z "${COMPONENT}" ];  then
 fi
 
 LID=lt-0d3d6c2696389f95f
-LVER=2
+LVER=4
 
 
 DNS_UPDATE() {
